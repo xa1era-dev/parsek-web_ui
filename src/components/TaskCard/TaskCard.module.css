@@ -1,0 +1,207 @@
+.card {
+  --status-color: #d39a61;
+  background: #fff;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 960px;
+  overflow: hidden;
+}
+
+.cardHeader {
+  background: var(--status-color);
+  padding: 7px 12px;
+}
+
+.cardHeaderRunning {
+  --status-color: #61a361;
+}
+
+.cardHeaderPaused {
+  --status-color: #e5c456;
+}
+
+.cardHeaderStopped {
+  --status-color: #8c8882;
+}
+
+.cardHeaderError {
+  --status-color: #c96055;
+}
+
+.cardHeaderRow {
+  display: grid;
+  grid-template-columns: 300px 1fr 1fr auto;
+  gap: 0 15px;
+  width: 930px;
+  overflow: hidden;
+}
+
+.headerCell {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-size: 12px;
+  color: #000;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.cardBody {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px 14px 14px;
+}
+
+.panels {
+  display: flex;
+  gap: 12px;
+}
+
+.cardFooter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 1px solid #ebebeb;
+  width: 930px;
+}
+
+.footerInfo {
+  font-size: 11px;
+  color: #888;
+}
+
+.footerActions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btnPause {
+  appearance: none;
+  padding: 0 13px;
+  height: 28px;
+  border: 1px solid #c9aa3a;
+  border-radius: 7px;
+  background: #e5c456;
+  font: inherit;
+  font-size: 12px;
+  color: #1a1a1a;
+  cursor: pointer;
+  transition: filter 120ms;
+}
+
+.btnResume {
+  appearance: none;
+  padding: 0 13px;
+  height: 28px;
+  border: 1px solid #4a8a4a;
+  border-radius: 7px;
+  background: #61a361;
+  font: inherit;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: filter 120ms;
+}
+
+.btnDropdown {
+  appearance: none;
+  padding: 0 10px;
+  height: 28px;
+  border: 1px solid #d0d0d0;
+  border-radius: 7px;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 120ms, background 120ms;
+}
+
+.btnDropdown:hover:not(:disabled) {
+  filter: brightness(0.9);
+}
+
+/* visual overrides for the generic Dropdown list in this card */
+.dropdownMenu {
+  border: 0.5px solid rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  min-width: 130px;
+}
+
+/* item overrides: smaller font, tighter padding */
+.dropdownItem {
+  padding: 7px 12px;
+  font-size: 12px;
+}
+
+.btnDelete {
+  appearance: none;
+  padding: 0 13px;
+  height: 28px;
+  border: 1px solid #b04040;
+  border-radius: 7px;
+  background: #c96055;
+  font: inherit;
+  font-size: 12px;
+  color: #fff;
+  cursor: pointer;
+  transition: filter 120ms;
+}
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  padding: 20px 24px;
+  max-width: 420px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.modalText {
+  font-size: 13px;
+  color: #1a1a1a;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.modalActions {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-end;
+}
+
+.btnCancel {
+  appearance: none;
+  padding: 0 13px;
+  height: 28px;
+  border: 1px solid #d0d0d0;
+  border-radius: 7px;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 120ms, background 120ms;
+}
+
+.podLogs {
+  margin: 0;
+  padding: 8px 10px;
+  background: #1a1a1a;
+  color: #f08080;
+  font-size: 11px;
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  white-space: pre-wrap;
+  word-break: break-all;
+  border-radius: 7px;
+  border: 1px solid rgba(201, 96, 85, 0.35);
+}

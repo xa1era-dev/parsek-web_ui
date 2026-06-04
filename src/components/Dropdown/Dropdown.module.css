@@ -1,0 +1,76 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* ── Arrow ───────────────────────────────────────────────── */
+.arrow {
+  display: inline-block;
+  margin-left: 4px;
+  font-size: 10px;
+  opacity: 0.7;
+  transition: transform 0.15s;
+}
+
+.arrowOpen {
+  transform: rotate(180deg);
+}
+
+/* ── List ────────────────────────────────────────────────── */
+.list {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  z-index: 100;
+  margin: 0;
+  padding: 4px 0;
+  list-style: none;
+  background: #fff;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.10);
+  min-width: 120px;
+  width: max-content;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* portal overrides position via inline style — only z-index needs bumping */
+.list[style] {
+  z-index: 1000;
+}
+
+.listAlignRight {
+  left: auto;
+  right: 0;
+}
+
+/* ── Items ───────────────────────────────────────────────── */
+.item {
+  padding: 7px 14px;
+  font: inherit;
+  font-size: 13px;
+  color: #1a1a1a;
+  cursor: pointer;
+  user-select: none;
+  transition: background 0.1s;
+  list-style: none;
+}
+
+.item:hover:not(.itemDisabled) {
+  background: #f5f5f5;
+}
+
+.itemActive {
+  color: #c97c2e;
+  font-weight: 500;
+}
+
+.itemDanger {
+  color: #c96055;
+}
+
+.itemDisabled {
+  opacity: 0.4;
+  cursor: default;
+}

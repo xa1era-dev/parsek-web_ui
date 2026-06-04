@@ -1,0 +1,638 @@
+/* ── Overlay ── */
+
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ── Modal dialog ── */
+
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  width: calc(100vw - 48px);
+  max-width: 1020px;
+  max-height: calc(100vh - 48px);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.modalHeader {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ebebeb;
+  flex-shrink: 0;
+}
+
+.modalTitle {
+  flex: 1;
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+.closeBtn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 120ms, color 120ms;
+}
+
+.closeBtn:hover {
+  background: rgba(0, 0, 0, 0.07);
+  color: #333;
+}
+
+/* ── Inner layout ── */
+
+.layout {
+  display: flex;
+  align-items: stretch;
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+.mainContent {
+  flex: 1;
+  min-width: 0;
+  overflow-y: auto;
+}
+
+/* ── Sidebar ── */
+
+.sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  padding: 20px;
+  border-left: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow: hidden;
+}
+
+.sidebarBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebarBlockGrow {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.sidebarTitle {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888;
+  padding-bottom: 6px;
+  border-bottom: 1px solid #e8e8e8;
+  margin-bottom: 2px;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  font-size: 12px;
+  gap: 8px;
+}
+
+.summaryKey {
+  color: #666;
+  flex-shrink: 0;
+}
+
+.summaryVal {
+  font-weight: 500;
+  color: #1a1a1a;
+  text-align: right;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 130px;
+}
+
+.summaryValEmpty {
+  color: #bbb;
+  font-style: italic;
+  text-align: right;
+}
+
+.validationList {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.validationItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  font-size: 11.5px;
+  color: #c94040;
+  line-height: 1.4;
+}
+
+.validationIcon {
+  flex-shrink: 0;
+  font-size: 10px;
+  margin-top: 2px;
+}
+
+.validationOk {
+  font-size: 11.5px;
+  color: #4a9a4a;
+}
+
+/* ── Notifications ── */
+
+.noticeItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 6px 8px;
+  background: #fffbf0;
+  border: 1px solid #f0d080;
+  border-radius: 6px;
+  font-size: 11px;
+}
+
+.noticeLabel {
+  font-weight: 600;
+  color: #6b4f00;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.noticeText {
+  font-size: 10.5px;
+  color: #9a7020;
+}
+
+.noticePath {
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  font-size: 10px;
+  color: #9a7020;
+}
+
+.jsonBlock {
+  position: relative;
+  background: #1a1a1a;
+  border-radius: 7px;
+  padding: 28px 12px 10px;
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.jsonPre {
+  margin: 0;
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  font-size: 10.5px;
+  color: #e8e8e8;
+  white-space: pre;
+  overflow-x: auto;
+  overflow-y: auto;
+  flex: 1;
+  min-height: 0;
+}
+
+.copyBtn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  padding: 2px 8px;
+  font-size: 10px;
+  background: rgba(255,255,255,0.1);
+  color: #aaa;
+  border: 1px solid rgba(255,255,255,0.18);
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background 120ms, color 120ms;
+}
+
+.copyBtn:hover {
+  background: rgba(255,255,255,0.18);
+  color: #fff;
+}
+
+.copyBtnOk {
+  color: #7dd87d;
+  border-color: rgba(125,216,125,0.35);
+}
+
+/* ── Footer ── */
+
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 10px 16px;
+  border-top: 1px solid #ebebeb;
+  flex-shrink: 0;
+  background: #fafafa;
+  border-radius: 0 0 12px 12px;
+}
+
+.footerRight {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.runError {
+  flex: 1;
+  font-size: 11px;
+  color: #e04040;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.footerClearBtn {
+  appearance: none;
+  padding: 0 12px;
+  height: 32px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  background: transparent;
+  font: inherit;
+  font-size: 12px;
+  color: #888;
+  cursor: pointer;
+  transition: border-color 120ms, color 120ms, background 120ms;
+}
+
+.footerClearBtn:hover {
+  border-color: #e04040;
+  color: #c55;
+  background: #fee2e2;
+}
+
+.footerSecondBtn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 0 12px;
+  height: 32px;
+  border: 1px solid #d0d0d0;
+  border-radius: 8px;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  transition: border-color 120ms, background 120ms;
+}
+
+.footerSecondBtn:hover:not(:disabled) {
+  border-color: #999;
+  background: #f5f5f5;
+}
+
+.footerSecondBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.keybind {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 5px;
+  border-radius: 4px;
+  background: #f0f0f0;
+  border: 1px solid #d8d8d8;
+  font-size: 10px;
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  color: #888;
+  line-height: 1.4;
+  flex-shrink: 0;
+}
+
+.footerPrimaryBtn {
+  appearance: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 0 16px;
+  height: 32px;
+  border: 1px solid #b8813a;
+  border-radius: 8px;
+  background: #c8904a;
+  font: inherit;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: filter 120ms;
+}
+
+.footerPrimaryBtn:hover:not(:disabled) {
+  filter: brightness(1.08);
+}
+
+.footerPrimaryBtn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ── Left sidebar ── */
+
+.leftSidebar {
+  width: 180px;
+  flex-shrink: 0;
+  padding: 20px;
+  border-right: 1px solid #ebebeb;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  overflow-y: auto;
+}
+
+.presetSelect {
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  padding: 0 24px 0 8px;
+  border: 1px solid #d8d8d8;
+  border-radius: 7px;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23aaa'/%3E%3C/svg%3E") no-repeat right 8px center;
+  font: inherit;
+  font-size: 12px;
+  color: #333;
+  outline: none;
+  cursor: pointer;
+  transition: border-color 120ms;
+}
+
+.presetSelect:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.presetActions {
+  display: flex;
+  gap: 6px;
+}
+
+.presetLoadBtn {
+  flex: 1;
+  appearance: none;
+  padding: 5px 0;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #fff;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: opacity 120ms;
+}
+
+.presetLoadBtn:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.presetLoadBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.presetDeleteBtn {
+  flex: 1;
+  appearance: none;
+  padding: 5px 0;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  background: transparent;
+  color: #888;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: border-color 120ms, color 120ms, background 120ms;
+}
+
+.presetDeleteBtn:hover:not(:disabled) {
+  border-color: #e04040;
+  color: #c55;
+  background: #fee2e2;
+}
+
+.presetDeleteBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+.presetSaveBtn {
+  appearance: none;
+  width: 100%;
+  padding: 6px 10px;
+  border: 1.5px dashed #d8d8d8;
+  border-radius: 7px;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  color: #aaa;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 120ms, color 120ms, background 120ms;
+}
+
+.presetSaveBtn:hover {
+  border-color: #999;
+  color: #444;
+  background: #fafafa;
+}
+
+.presetSaveRow {
+  display: flex;
+  gap: 4px;
+}
+
+.presetNameInput {
+  flex: 1;
+  min-width: 0;
+  height: 28px;
+  padding: 0 7px;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  font: inherit;
+  font-size: 11px;
+  color: #1a1a1a;
+  background: #fff;
+  outline: none;
+  transition: border-color 120ms;
+}
+
+.presetNameInput:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.presetSaveConfirmBtn {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #fff;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 120ms;
+}
+
+.presetSaveConfirmBtn:hover:not(:disabled) {
+  opacity: 0.8;
+}
+
+.presetSaveConfirmBtn:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+
+/* ── Import preset ── */
+
+.importOpenBtn {
+  appearance: none;
+  width: 100%;
+  padding: 6px 10px;
+  border: 1.5px dashed #d8d8d8;
+  border-radius: 7px;
+  background: transparent;
+  font: inherit;
+  font-size: 11px;
+  color: #aaa;
+  cursor: pointer;
+  text-align: center;
+  transition: border-color 120ms, color 120ms, background 120ms;
+}
+
+.importOpenBtn:hover {
+  border-color: #999;
+  color: #444;
+  background: #fafafa;
+}
+
+.importTextarea {
+  width: 100%;
+  height: 100px;
+  padding: 6px 8px;
+  border: 1px solid #d8d8d8;
+  border-radius: 7px;
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  font-size: 10px;
+  color: #1a1a1a;
+  background: #fafafa;
+  resize: vertical;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 120ms;
+}
+
+.importTextarea:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.importError {
+  font-size: 11px;
+  color: #c94040;
+}
+
+.importActions {
+  display: flex;
+  gap: 6px;
+}
+
+.importApplyBtn {
+  flex: 1;
+  appearance: none;
+  padding: 5px 0;
+  border: 1px solid #1a1a1a;
+  border-radius: 6px;
+  background: #1a1a1a;
+  color: #fff;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: opacity 120ms;
+}
+
+.importApplyBtn:hover {
+  opacity: 0.8;
+}
+
+.importCancelBtn {
+  flex: 1;
+  appearance: none;
+  padding: 5px 0;
+  border: 1px solid #d8d8d8;
+  border-radius: 6px;
+  background: transparent;
+  color: #888;
+  font: inherit;
+  font-size: 11px;
+  cursor: pointer;
+  transition: border-color 120ms, color 120ms;
+}
+
+.importCancelBtn:hover {
+  border-color: #999;
+  color: #444;
+}
+
+.numberInputBtn {
+  width: 22px;
+  height: 22px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background: #f5f5f5;
+  color: #333;
+  font-size: 14px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background 120ms, border-color 120ms;
+}
+
+.numberInputBtn:hover {
+  background: #e8e8e8;
+  border-color: #aaa;
+}

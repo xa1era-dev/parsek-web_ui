@@ -1,0 +1,56 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  color: #202020;
+  background: #fff;
+  min-height: 100vh;
+}
+
+button {
+  font-family: inherit;
+  font-size: 12px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+button:hover:not(:disabled) {
+  filter: brightness(1.1);
+}
+
+.clickable {
+  padding: 1px 5px;
+  border-radius: 3px;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.2);
+  transition-duration: 150ms;
+}
+
+.clickable:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.modalOverlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}

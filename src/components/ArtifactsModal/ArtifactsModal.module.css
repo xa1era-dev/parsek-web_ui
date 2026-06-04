@@ -1,0 +1,106 @@
+/* ── Filter dropdown (rendered via portal, position: fixed) ── */
+.filterDropdown {
+  position: fixed;
+  z-index: 9999;
+  background: #fff;
+  border: 0.5px solid rgba(0, 0, 0, 0.14);
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 200px;
+}
+
+.filterInput {
+  appearance: none;
+  width: 100%;
+  height: 28px;
+  padding: 0 8px;
+  border: 0.5px solid rgba(0, 0, 0, 0.14);
+  border-radius: 7px;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  color: #1a1a1a;
+  outline: none;
+  box-sizing: border-box;
+  transition: border-color 120ms;
+}
+
+.filterInput:focus {
+  border-color: rgba(0, 0, 0, 0.3);
+}
+
+.filterActions {
+  display: flex;
+  gap: 6px;
+  justify-content: flex-end;
+}
+
+.filterApply {
+  appearance: none;
+  padding: 0 12px;
+  height: 26px;
+  border: 1px solid #b8813a;
+  border-radius: 6px;
+  background: #c8904a;
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  color: #fff;
+  cursor: pointer;
+  transition: filter 120ms;
+}
+
+.filterApply:hover {
+  filter: brightness(1.08);
+}
+
+.filterClear {
+  appearance: none;
+  padding: 0 10px;
+  height: 26px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+  font-size: 11px;
+  color: #888;
+  cursor: pointer;
+  transition: border-color 120ms, color 120ms, background 120ms;
+}
+
+.filterClear:hover {
+  border-color: #e04040;
+  color: #c55;
+  background: #fee2e2;
+}
+
+/* ── Action buttons ── */
+.btnGroup {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+}
+
+.actionBtn {
+  appearance: none;
+  padding: 0 8px;
+  height: 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  background: #fff;
+  font: inherit;
+  font-size: 11px;
+  color: #333;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: border-color 120ms, background 120ms;
+}
+
+.actionBtn:hover {
+  border-color: #999;
+  background: #f5f5f5;
+}

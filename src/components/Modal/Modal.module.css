@@ -1,0 +1,133 @@
+.modal {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  width: 1374px;
+  max-width: calc(100vw - 48px);
+  max-height: calc(100vh - 48px);
+  overflow: hidden;
+}
+
+/* ── Header ── */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 12px 16px;
+  border-bottom: 1px solid #ebebeb;
+  flex-shrink: 0;
+}
+
+.header > span {
+  font-size: 14px;
+  font-weight: 700;
+  color: #1a1a1a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.totalCount {
+  font-size: 12px;
+  color: #888;
+}
+
+.closeBtn {
+  appearance: none;
+  border: 0;
+  background: transparent;
+  color: #aaa;
+  font-size: 14px;
+  cursor: pointer;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: background 120ms, color 120ms;
+}
+
+.closeBtn:hover {
+  background: rgba(0, 0, 0, 0.07);
+  color: #333;
+}
+
+/* ── Pagination ── */
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 10px 16px;
+  border-top: 1px solid #ebebeb;
+  flex-shrink: 0;
+  background: #fafafa;
+  border-radius: 0 0 12px 12px;
+}
+
+.pageBtn {
+  appearance: none;
+  padding: 0 10px;
+  height: 28px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  color: #333;
+  cursor: pointer;
+  min-width: 32px;
+  transition: border-color 120ms, background 120ms;
+}
+
+.pageBtn:not(:disabled):hover {
+  border-color: #999;
+  background: #f5f5f5;
+}
+
+.pageBtn:disabled {
+  color: #ccc;
+  cursor: default;
+}
+
+.pageInput {
+  appearance: none;
+  width: 52px;
+  height: 28px;
+  padding: 0 6px;
+  border: 1px solid #d0d0d0;
+  border-radius: 6px;
+  background: #fff;
+  font: inherit;
+  font-size: 12px;
+  color: #1a1a1a;
+  text-align: center;
+  outline: none;
+  transition: border-color 120ms;
+}
+
+.pageInput:focus {
+  border-color: #c8904a;
+}
+
+.pageInput:disabled {
+  color: #aaa;
+  background: #f5f5f5;
+}
+
+.pageTotal {
+  font-size: 12px;
+  color: #888;
+}

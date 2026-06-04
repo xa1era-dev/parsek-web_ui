@@ -1,0 +1,73 @@
+.body {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
+}
+
+.loading {
+  padding: 40px;
+  text-align: center;
+  font-size: 13px;
+  color: #aaa;
+}
+
+/* ── Section ── */
+.section {
+  border-bottom: 1px solid #ebebeb;
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.sectionHeader {
+  padding: 8px 16px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888;
+  background: #fafafa;
+  border-bottom: 1px solid #ebebeb;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+/* ── Table section ── */
+.tableWrap {
+  height: 240px;
+  display: flex;
+  flex-direction: column;
+}
+
+.empty {
+  padding: 20px 16px;
+  font-size: 12px;
+  color: #bbb;
+}
+
+/* ── Scalar section ── */
+.scalar {
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #1a1a1a;
+}
+
+.null {
+  color: #bbb;
+  font-style: italic;
+}
+
+.json {
+  margin: 0;
+  font-family: ui-monospace, 'Cascadia Code', monospace;
+  font-size: 11px;
+  color: #1a1a1a;
+  background: #f8f8f8;
+  border: 1px solid #ebebeb;
+  border-radius: 6px;
+  padding: 8px 10px;
+  white-space: pre-wrap;
+  word-break: break-all;
+}

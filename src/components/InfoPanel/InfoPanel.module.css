@@ -1,0 +1,74 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border: 1px solid #e2e2e2;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fff;
+}
+
+.panelHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 8px 5px 10px;
+  background: #f8f8f8;
+  border-bottom: 1px solid #ebebeb;
+  min-height: 28px;
+}
+
+.panelLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #888;
+}
+
+.panelButton {
+  appearance: none;
+  padding: 0 9px;
+  height: 20px;
+  border: 1px solid #d0d0d0;
+  border-radius: 5px;
+  background: #fff;
+  font: inherit;
+  font-size: 11px;
+  color: #555;
+  cursor: pointer;
+  transition: border-color 120ms, background 120ms;
+}
+
+.panelButton:hover {
+  border-color: #999;
+  background: #f5f5f5;
+}
+
+.panelContent {
+  padding: 8px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 8px;
+  font-size: 12px;
+  white-space: nowrap;
+}
+
+.row > span:first-child {
+  color: #666;
+  flex-shrink: 0;
+}
+
+.row > span:last-child {
+  font-weight: 500;
+  color: #1a1a1a;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
